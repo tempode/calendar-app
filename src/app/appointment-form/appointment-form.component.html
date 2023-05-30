@@ -1,0 +1,50 @@
+<div class="container">
+    <h2 class="form-title">
+        {{ isEditMode ? 'Update' : 'Create' }} Appointment
+    </h2>
+    <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+        <div class="form-elements">
+            <mat-form-field>
+                <input matInput formControlName="title" placeholder="Title" />
+            </mat-form-field>
+            <mat-form-field>
+                <input
+                    matInput
+                    [matDatepicker]="picker"
+                    formControlName="date"
+                    placeholder="Date"
+                />
+                <mat-datepicker-toggle
+                    matSuffix
+                    [for]="picker"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field>
+                <textarea
+                    matInput
+                    formControlName="description"
+                    placeholder="Description"
+                ></textarea>
+            </mat-form-field>
+        </div>
+        <div class="button-group">
+            <button
+                mat-raised-button
+                color="primary"
+                type="submit"
+                [disabled]="appointmentForm.invalid"
+            >
+                {{ isEditMode ? 'Update' : 'Create' }}
+            </button>
+            <button
+                mat-raised-button
+                color="warn"
+                type="button"
+                (click)="closeForm()"
+            >
+                Cancel
+            </button>
+        </div>
+    </form>
+</div>

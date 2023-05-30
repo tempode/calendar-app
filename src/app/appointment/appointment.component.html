@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="area">
+        <div class="datepicker-container">
+            <button
+                class="create"
+                mat-raised-button
+                color="primary"
+                (click)="navigateToCreate()"
+            >
+                Create
+            </button>
+            <app-datepicker></app-datepicker>
+        </div>
+        <div class="appointments">
+            <h1>Appointments</h1>
+            <div
+                class="appointment-group"
+                *ngFor="let group of filteredAppointmentGroups"
+            >
+                <h3>{{ group.date }}</h3>
+                <ul>
+                    <li
+                        *ngFor="let appointment of group.appointments"
+                        class="appointment-item"
+                        cdkDrag
+                        (click)="navigateToEdit(appointment)"
+                    >
+                        <span>{{ appointment.title }}</span>
+                        <button
+                            mat-icon-button
+                            class="delete-button"
+                            (click)="deleteAppointment(appointment.id)"
+                        >
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

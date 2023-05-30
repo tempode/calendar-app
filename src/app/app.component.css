@@ -1,0 +1,25 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(241, 240, 245);
+  align-items: center;
+  height: 60px;
+  border-bottom: 1px solid rgb(204, 209, 224);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 9999;
+}
+
+nav .logo {
+  font-size: 23px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+nav .logo span {
+  color: black;
+}

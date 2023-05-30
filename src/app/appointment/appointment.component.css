@@ -1,0 +1,76 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  margin-top: 40px;
+}
+
+.appointments h2 {
+  font-weight: bold;
+}
+
+.area {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.appointments {
+  width: 500px;
+
+  padding: 20px;
+}
+
+.appointments h3 {
+  background-color: var(--primary);
+  padding: 10px;
+
+  width: 120px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+.appointments li {
+  cursor: pointer;
+  background-color: var(--low-shade-primary);
+  padding: 20px;
+
+  margin-top: 2px;
+  border-radius: 10px;
+}
+
+.create {
+  background-color: var(--primary);
+  color: white;
+  padding: 10px;
+  width: 100px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.create:hover {
+  background-color: var(--low-shade-primary);
+  color: black;
+}
+
+.appointment-item {
+  position: relative;
+}
+
+.delete-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  visibility: hidden;
+}
+
+.appointment-item:hover .delete-button {
+  visibility: visible;
+}
+

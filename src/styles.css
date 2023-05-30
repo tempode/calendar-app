@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%;
+background-color: rgb(201, 203, 224);
+}
+
+li {
+  list-style: none;
+}
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+:root {
+  --primary: rgb(72, 66, 255);
+  --low-shade-primary: rgba(72, 66, 255, 0.183);
+}
